@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220612 12:28:54.214" rpa="false" schemaversion="3">
+<suite id="s1" name="Handling Alerts" source="D:\Advance_Robot_Python\Robot Framework_Workshop_7_SeleniumLibrary Functions\handling_alerts.robot">
+<test id="s1-t1" name="TC1 Click button &quot;Click for js alert &quot;" line="5">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://the-internet.herokuapp.com/javascript_alerts</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220612 12:28:54.409" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/javascript_alerts'.</msg>
+<status status="PASS" starttime="20220612 12:28:54.408" endtime="20220612 12:29:00.400"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//ul/li[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:00.401" level="INFO">Clicking element '//ul/li[1]/button'.</msg>
+<status status="PASS" starttime="20220612 12:29:00.400" endtime="20220612 12:29:00.459"/>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220612 12:29:00.460" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220612 12:29:00.459" endtime="20220612 12:29:00.465"/>
+</kw>
+<status status="PASS" starttime="20220612 12:28:54.408" endtime="20220612 12:29:00.466"/>
+</test>
+<test id="s1-t2" name="TC2 Click button &quot;Click for js confirm&quot;" line="9">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//ul/li[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:00.469" level="INFO">Clicking element '//ul/li[2]/button'.</msg>
+<status status="PASS" starttime="20220612 12:29:00.469" endtime="20220612 12:29:00.607"/>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<arg>DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220612 12:29:00.611" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220612 12:29:00.609" endtime="20220612 12:29:00.628"/>
+</kw>
+<status status="PASS" starttime="20220612 12:29:00.468" endtime="20220612 12:29:00.631"/>
+</test>
+<test id="s1-t3" name="TC3 Click button &quot;Click for js prompt&quot; and input text into alert" line="13">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//ul/li[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:00.640" level="INFO">Clicking element '//ul/li[3]/button'.</msg>
+<status status="PASS" starttime="20220612 12:29:00.638" endtime="20220612 12:29:00.869"/>
+</kw>
+<kw name="Input Text Into Alert" library="Selenium2Library">
+<arg>Napaphorn</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" starttime="20220612 12:29:00.870" endtime="20220612 12:29:00.888"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220612 12:29:00.890" endtime="20220612 12:29:03.224"/>
+</kw>
+<status status="PASS" starttime="20220612 12:29:00.636" endtime="20220612 12:29:03.226"/>
+</test>
+<test id="s1-t4" name="TC4 Switch Browser" line="18">
+<kw name="Open Browser" library="Selenium2Library">
+<var>${a}</var>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220612 12:29:03.234" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20220612 12:29:06.390" level="INFO">${a} = 1</msg>
+<status status="PASS" starttime="20220612 12:29:03.234" endtime="20220612 12:29:06.390"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<var>${b}</var>
+<arg>https://www.google.co.in</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220612 12:29:06.391" level="INFO">Opening browser 'chrome' to base url 'https://www.google.co.in'.</msg>
+<msg timestamp="20220612 12:29:09.802" level="INFO">${b} = 2</msg>
+<status status="PASS" starttime="20220612 12:29:06.390" endtime="20220612 12:29:09.802"/>
+</kw>
+<kw name="Switch Browser" library="Selenium2Library">
+<arg>${a}</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" starttime="20220612 12:29:09.803" endtime="20220612 12:29:09.803"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220612 12:29:09.804" endtime="20220612 12:29:09.974"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@class='gLFyf gsfi']</arg>
+<arg>Robot FrameWork</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:09.976" level="INFO">Typing text 'Robot FrameWork' into text field '//input[@class='gLFyf gsfi']'.</msg>
+<status status="PASS" starttime="20220612 12:29:09.975" endtime="20220612 12:29:10.194"/>
+</kw>
+<kw name="Switch Browser" library="Selenium2Library">
+<arg>${b}</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="PASS" starttime="20220612 12:29:10.194" endtime="20220612 12:29:10.195"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220612 12:29:10.195" endtime="20220612 12:29:10.312"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@class='gLFyf gsfi']</arg>
+<arg>Selenium2Library</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:10.319" level="INFO">Typing text 'Selenium2Library' into text field '//input[@class='gLFyf gsfi']'.</msg>
+<status status="PASS" starttime="20220612 12:29:10.315" endtime="20220612 12:29:10.579"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220612 12:29:10.580" endtime="20220612 12:29:15.192"/>
+</kw>
+<status status="PASS" starttime="20220612 12:29:03.231" endtime="20220612 12:29:15.194"/>
+</test>
+<test id="s1-t5" name="TC5 Frame" line="31">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://the-internet.herokuapp.com/nested_frames</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220612 12:29:15.201" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/nested_frames'.</msg>
+<status status="PASS" starttime="20220612 12:29:15.200" endtime="20220612 12:29:18.833"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>//frame[@src='/frame_top']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220612 12:29:18.834" level="INFO">Selecting frame '//frame[@src='/frame_top']'.</msg>
+<status status="PASS" starttime="20220612 12:29:18.833" endtime="20220612 12:29:18.867"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>//frame[@src='/frame_middle']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220612 12:29:18.868" level="INFO">Selecting frame '//frame[@src='/frame_middle']'.</msg>
+<status status="PASS" starttime="20220612 12:29:18.867" endtime="20220612 12:29:18.895"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${a}</var>
+<arg>//div[@id='content']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220612 12:29:18.928" level="INFO">${a} = MIDDLE</msg>
+<status status="PASS" starttime="20220612 12:29:18.896" endtime="20220612 12:29:18.928"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${a}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220612 12:29:18.930" level="INFO">MIDDLE</msg>
+<status status="PASS" starttime="20220612 12:29:18.928" endtime="20220612 12:29:18.930"/>
+</kw>
+<status status="PASS" starttime="20220612 12:29:15.198" endtime="20220612 12:29:18.930"/>
+</test>
+<status status="PASS" starttime="20220612 12:28:54.215" endtime="20220612 12:29:18.932"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Handling Alerts">Handling Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
